@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class TicketCLItoGitHub {
     public static void main(String[]args){
         Scanner inputBuffObj=new Scanner(System.in);
-        int maxNoOfTickets=5;
-        int [] customerTickets=new int[maxNoOfTickets];
-        for (int currentNoOfTickets = 0; currentNoOfTickets < maxNoOfTickets; currentNoOfTickets++) {
-            System.out.printf("[%d] Please enter your Ticket Number: ", currentNoOfTickets);
-            customerTickets[currentNoOfTickets] = inputBuffObj.nextInt();
+        int maxNoOfFeedback=5;
+        String [] customerFeedback=new String[maxNoOfFeedback];
+        for (int currentNoOfTickets = 0; currentNoOfTickets < maxNoOfFeedback; currentNoOfTickets++) {
+            System.out.printf("[%d] Please enter your Feedback Number: ", currentNoOfTickets);
+            customerFeedback[currentNoOfTickets] = inputBuffObj.nextLine();
         }
-        for (int currentNoOfTickets=0; currentNoOfTickets<maxNoOfTickets;currentNoOfTickets++) {
-            System.out.printf("Tickets number: %s, The Number of the Tickets: %s \n", currentNoOfTickets,customerTickets[currentNoOfTickets]);
+        for (int currentNoOfFeedback=0; currentNoOfFeedback<maxNoOfFeedback;currentNoOfFeedback++) {
+            System.out.printf("Feedback number: %d, The Feedback: %s \n", currentNoOfFeedback,customerFeedback[currentNoOfFeedback]);
         }
     }
 
