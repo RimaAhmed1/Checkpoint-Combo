@@ -1,21 +1,18 @@
 import java.util.Scanner;
 
 public class TicketCLItoGitHub {
-    public static void main(String[]args) throws InterruptedException{
-        //Declare
-        Scanner inputBuffObj= new Scanner(System.in);
-        int maxNoOfFeedbacks=5;
-        boolean keepRunning=true;
-
-        String [] customerFeedbacks=new String[maxNoOfFeedbacks];
-
-        //Input
-        for (int currentNoOfFeedback=0; currentNoOfFeedback<maxNoOfFeedbacks;currentNoOfFeedback++) {
-            System.out.printf("[%d] Please enter your feedback: ", currentNoOfFeedback);
-            customerFeedbacks[currentNoOfFeedback]=inputBuffObj.nextLine();
+    public static void main(String[]args){
+        Scanner inputBuffObj=new Scanner(System.in);
+        int maxNoOfTickets=5;
+        int [] customerTickets=new int[maxNoOfTickets];
+        for (int currentNoOfTickets = 0; currentNoOfTickets < maxNoOfTickets; currentNoOfTickets++) {
+            System.out.printf("[%d] Please enter your Ticket Number: ", currentNoOfTickets);
+            customerTickets[currentNoOfTickets] = inputBuffObj.nextInt();
         }
-        //process
-        //output
-
+        for (int currentNoOfTickets=0; currentNoOfTickets<maxNoOfTickets;currentNoOfTickets++) {
+            System.out.printf("Tickets number: %s, The Number of the Tickets: %s \n", currentNoOfTickets,customerTickets[currentNoOfTickets]);
+        }
     }
+
+
 }
